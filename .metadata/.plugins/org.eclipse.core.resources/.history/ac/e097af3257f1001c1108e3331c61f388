@@ -1,0 +1,7 @@
+package com.user.entity;
+
+public class SearchFlightDetails {
+
+	private List<SearchFlightModel>
+	
+}

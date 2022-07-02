@@ -1,0 +1,27 @@
+package com.admin.Repo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.admin.entity.Useraccount;
+import com.admin.service.IUseraccountRepostiory;
+import com.admin.service.UseraccountServiceImpl;
+
+public class AdminTestCheck {
+
+	@Autowired
+	private UseraccountServiceImpl useraccountServiceImpl;
+
+	@Test
+	void loadUserPresent() {
+
+		String name = "krishna@test.com";
+		Useraccount useraccount = useraccountServiceImpl.getUseraccountByUsername(name);
+
+		assertThat(actualRest).isEqualTo(expextResult);
+
+
+		
+	}
+
+}

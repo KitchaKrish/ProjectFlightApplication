@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserCtrlTest" project="User" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.user.Repo.UserCtrlTest" time="0.299" displayname="UserCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]">
+    <testcase name="contextLoads" classname="com.user.Repo.UserCtrlTest" time="0.299" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

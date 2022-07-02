@@ -1,0 +1,27 @@
+package com.admin.Repo;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.admin.entity.Useraccount;
+import com.admin.service.UseraccountServiceImpl;
+
+public class AdminTestCheck {
+
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+
+	@Test
+	void loadUserPresent() {
+
+		String name = "krishna@test.com";
+		Useraccount useraccount = useraccountServiceImpl.getUseraccountByUsername(name);
+		System.out.println(useraccount.getUserName());
+		if(name.equalsIgnoreCase(useraccount.getUserName())) {
+			
+		}
+	}
+
+}

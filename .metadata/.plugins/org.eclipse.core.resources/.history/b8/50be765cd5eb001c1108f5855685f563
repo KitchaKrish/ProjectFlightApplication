@@ -1,0 +1,5 @@
+package com.user.ticket.service;
+
+public interface IPassangerDetailsRepostiory extends JpaRepository<TicketBooking, Long>{
+
+}

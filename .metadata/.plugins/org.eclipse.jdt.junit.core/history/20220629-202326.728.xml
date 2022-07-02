@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminCtrlTest.createAirlineNew" project="Admin" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminCtrlTest" time="0.871" displayname="AdminCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]">
+    <testcase name="createAirlineNew" classname="com.admin.Repo.AdminCtrlTest" time="0.871" displayname="createAirlineNew()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createAirlineNew()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,15 @@
+package com.admin.Repo;
+
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.admin.ctrl.AdminCtrl;
+import com.admin.service.AdminService;
+
+@WebMvcTest(value = AdminCtrl.class)
+public class AdminCtrlTest {
+	
+	@MockBean
+	private AdminService adminService;
+
+}

@@ -1,0 +1,77 @@
+package com.user.Repo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.ResponseEntity;
+
+import com.user.ctrl.FlightCtrl;
+import com.user.ticket.entity.ShowticketDetails;
+
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+public class UserCtrlTest {
+
+	@Autowired
+	private FlightCtrl ctrl;
+
+	@Autowired
+	private TestRestTemplate restTemplate;
+
+	@Test
+	void contextLoads() {
+	}
+
+	@LocalServerPort
+	private int port;
+
+	@Test
+	public void allAirline() {
+
+		String pnr = "PNR0008763";
+		String mode = "ByPnrNumber";
+		ResponseEntity<ShowticketDetails> response = this.restTemplate.getForEntity(
+				"http://localhost:" + port + "/api/user/flightctrl/searchTicket/" + pnr + "/" + mode,
+				ShowticketDetails.class);
+
+		System.out.println("----->>>" + response.getStatusCodeValue());
+		assertEquals(response.getStatusCodeValue(), 200);
+		ShowticketDetails details = response.getBody();
+
+		assertEquals(details.isStatus(), true);
+		
+		
+		String userEmail = "Test@gmail.com";
+		 mode = "ByEmail";
+		ResponseEntity<ShowticketDetails> emailresponse = this.restTemplate.getForEntity(
+				"http://localhost:" + port + "/api/user/flightctrl/searchTicket/" + userEmail + "/" + mode,
+				ShowticketDetails.class);
+
+		System.out.println("----->>>" + emailresponse.getStatusCodeValue());
+		assertEquals(response.getStatusCodeValue(), 200);
+		ShowticketDetails showticketDetails = response.getBody();
+
+		assertEquals(showticketDetails.isStatus(), true);
+		
+		
+		
+		
+		 userEmail = "Test@gma.com";
+		 mode = "ByEmail";
+		ResponseEntity<ShowticketDetails> errorresponse = this.restTemplate.getForEntity(
+				"http://localhost:" + port + "/api/user/flightctrl/searchTicket/" + userEmail + "/" + mode,
+				ShowticketDetails.class);
+
+		assertEquals(response.getStatusCodeValue(), 200);
+		ShowticketDetails erroreDetails = response.getBody();
+
+		assertEquals(showticketDetails.isStatus(), true);
+
+		
+	}
+
+}

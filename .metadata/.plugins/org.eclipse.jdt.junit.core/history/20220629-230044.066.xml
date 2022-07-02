@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="User" project="User" tests="13" started="13" failures="0" errors="1" ignored="0">
+  <testsuite name="com.user.Repo.UserCtrlTest" time="3.24" displayname="UserCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]">
+    <testcase name="mealType" classname="com.user.Repo.UserCtrlTest" time="0.48" displayname="mealType()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:mealType()]">
+      <error>org.springframework.web.client.RestClientException: Error while extracting response for type [class [Ljava.lang.String;] and content type [application/json]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Ljava.lang.String;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Ljava.lang.String;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]&#13;
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:120)&#13;
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1034)&#13;
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1017)&#13;
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)&#13;
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)&#13;
+	at org.springframework.web.client.RestTemplate.getForEntity(RestTemplate.java:360)&#13;
+	at org.springframework.boot.test.web.client.TestRestTemplate.getForEntity(TestRestTemplate.java:233)&#13;
+	at com.user.Repo.UserCtrlTest.mealType(UserCtrlTest.java:171)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)&#13;
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)&#13;
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Ljava.lang.String;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Ljava.lang.String;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]&#13;
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:285)&#13;
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:243)&#13;
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:105)&#13;
+	... 72 more&#13;
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Ljava.lang.String;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]&#13;
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)&#13;
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1468)&#13;
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1242)&#13;
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1148)&#13;
+	at com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer.handleNonArray(StringArrayDeserializer.java:314)&#13;
+	at com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer.deserialize(StringArrayDeserializer.java:132)&#13;
+	at com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer.deserialize(StringArrayDeserializer.java:21)&#13;
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)&#13;
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)&#13;
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:274)&#13;
+	... 74 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="contextLoads" classname="com.user.Repo.UserCtrlTest" time="0.007" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:contextLoads()]"/>
+    <testcase name="ticketbook" classname="com.user.Repo.UserCtrlTest" time="2.751" displayname="ticketbook()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:ticketbook()]"/>
+  </testsuite>
+  <testsuite name="com.user.Repo.UserTestCheck" time="0.685" displayname="UserTestCheck" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]">
+    <testcase name="airlineSavecheck" classname="com.user.Repo.UserTestCheck" time="0.062" displayname="airlineSavecheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:airlineSavecheck()]"/>
+    <testcase name="saveFlightcheck" classname="com.user.Repo.UserTestCheck" time="0.054" displayname="saveFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:saveFlightcheck()]"/>
+    <testcase name="deactivateAirline" classname="com.user.Repo.UserTestCheck" time="0.08" displayname="deactivateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:deactivateAirline()]"/>
+    <testcase name="airlineListByAirlineName" classname="com.user.Repo.UserTestCheck" time="0.229" displayname="airlineListByAirlineName()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:airlineListByAirlineName()]"/>
+    <testcase name="updateFlightcheck" classname="com.user.Repo.UserTestCheck" time="0.056" displayname="updateFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:updateFlightcheck()]"/>
+    <testcase name="deleteairlinecheck" classname="com.user.Repo.UserTestCheck" time="0.05" displayname="deleteairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:deleteairlinecheck()]"/>
+    <testcase name="updateairlinecheck" classname="com.user.Repo.UserTestCheck" time="0.042" displayname="updateairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:updateairlinecheck()]"/>
+    <testcase name="activateAirline" classname="com.user.Repo.UserTestCheck" time="0.051" displayname="activateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:activateAirline()]"/>
+    <testcase name="deleteFlightcheck" classname="com.user.Repo.UserTestCheck" time="0.061" displayname="deleteFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:deleteFlightcheck()]"/>
+  </testsuite>
+  <testsuite name="com.user.UserApplicationTests" time="0.006" displayname="UserApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.user.UserApplicationTests]">
+    <testcase name="contextLoads" classname="com.user.UserApplicationTests" time="0.006" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.user.UserApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,55 @@
+package com.admin.Repo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.admin.entity.AirLine;
+import com.admin.entity.Useraccount;
+import com.admin.service.IAirLineRepostiory;
+import com.admin.service.IUseraccountRepostiory;
+
+@SpringBootTest
+public class AdminTestCheck {
+
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+	
+	
+	@Autowired
+	private IAirLineRepostiory airLineRepostiory;
+
+	@Test
+	void loadUserPresent() {
+
+		String name = "krishna@test.com";
+		String firstName = "krishna@test.com";
+		Useraccount useraccount = useraccountRepostiory.findByUserName(name);
+		System.out.println(useraccount.getUserName());
+		assertEquals(name, useraccount.getUserName());
+		assertNotEquals("sdvsv", useraccount.getUserName());
+	}
+
+	
+	
+	@Test
+	void airlineSavecheck() {
+
+		AirLine airLine = new AirLine(111L,"TestAirline","1234",true,"TA");
+		airLineRepostiory.save(airLine);
+		AirLine resuAirLine = airLineRepostiory.findById(111L).orElseThrow();
+		  assertTrue(f3.equals(f4));
+		  assertFalse(f3.equals(f2));
+		
+		
+	}
+
+	
+	
+	
+	
+	
+}

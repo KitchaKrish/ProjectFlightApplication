@@ -1,0 +1,26 @@
+package com.admin.Repo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.admin.entity.Useraccount;
+import com.admin.service.IUseraccountRepostiory;
+
+@SpringBootTest
+public class AdminTestCheck {
+
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+
+	@Test
+	void loadUserPresent() {
+
+		String name = "krishna@test.com";
+		Useraccount useraccount = useraccountRepostiory.findByUserName(name);
+		System.out.println(useraccount.getUserName());
+		
+	}
+
+}

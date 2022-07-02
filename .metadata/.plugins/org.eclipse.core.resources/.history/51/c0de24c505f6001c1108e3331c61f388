@@ -1,0 +1,34 @@
+package com.user.ticket.entity;
+
+import java.util.List;
+
+public class ShowticketDetails {
+
+	private TicketBooking ticketBooking;
+	private List<PassangerDetails> passangeDetails;
+	public TicketBooking getTicketBooking() {
+		return ticketBooking;
+	}
+	public void setTicketBooking(TicketBooking ticketBooking) {
+		this.ticketBooking = ticketBooking;
+	}
+	public List<PassangerDetails> getPassangeDetails() {
+		return passangeDetails;
+	}
+	public void setPassangeDetails(List<PassangerDetails> passangeDetails) {
+		this.passangeDetails = passangeDetails;
+	}
+	public ShowticketDetails(TicketBooking ticketBooking, List<PassangerDetails> passangeDetails) {
+		super();
+		this.ticketBooking = ticketBooking;
+		this.passangeDetails = passangeDetails;
+	}
+	public ShowticketDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+
+	
+}

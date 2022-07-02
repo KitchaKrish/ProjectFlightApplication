@@ -1,0 +1,11 @@
+package com.admin.security;
+
+
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(
+
+		prePostEnabled = true)
+public class WebSecurityConfig {
+
+}

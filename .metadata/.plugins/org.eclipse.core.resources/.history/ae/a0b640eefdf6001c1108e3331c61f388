@@ -1,0 +1,136 @@
+package com.admin.Repo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.admin.ctrl.AdminCtrl;
+import com.admin.entity.AirLine;
+import com.admin.entity.FlightDetails;
+import com.admin.entity.Useraccount;
+import com.admin.service.AdminService;
+import com.admin.service.IAirLineRepostiory;
+import com.admin.service.IFlightDetailsRepostiory;
+import com.admin.service.IUseraccountRepostiory;
+
+@SpringBootTest
+public class AdminTestCheck {
+
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+
+	@Autowired
+	private IAirLineRepostiory airLineRepostiory;
+
+	@Autowired
+	private IFlightDetailsRepostiory iFlightDetailsRepostiory;
+
+	@Autowired
+	private AdminService adminService;
+
+	@Test
+	void loadUserPresent() {
+
+		String name = "krishna@test.com";
+		Useraccount useraccount = useraccountRepostiory.findByUserName(name);
+		System.out.println(useraccount.getUserName());
+		assertEquals(name, useraccount.getUserName());
+		assertNotEquals("sdvsv", useraccount.getUserName());
+	}
+
+	@Test
+	void airlineSavecheck() {
+		AirLine airLine = new AirLine("TestAirline", "1234", true, "TA");
+		AirLine falseAirline = new AirLine("TestAirlinecv", "1234", true, "TA");
+		AirLine resuAirLine = airLineRepostiory.save(airLine);
+		assertTrue(airLine.equals(resuAirLine));
+		assertFalse(falseAirline.equals(resuAirLine));
+		airLineRepostiory.deleteById(airLine.getAirlineId());
+	}
+
+	@Test
+	void saveFlightcheck() {
+		FlightDetails details = new FlightDetails("TestFlight", "TTF", true, "Chennai", "Coimbatore", "Bangalore",
+				"15:00", "18:00", "3:00", "AllDays", "Indico", 50l, "12000", 0l);
+		FlightDetails falseFlight = new FlightDetails("TestFlightTFE", "TTF", true, "Chennai", "Coimbatore",
+				"Bangalore", "15:00", "18:00", "3:00", "AllDays", "Indico", 50l, "12000", 0l);
+		FlightDetails resuAirLine = iFlightDetailsRepostiory.save(details);
+		assertTrue(details.equals(resuAirLine));
+		assertFalse(falseFlight.equals(resuAirLine));
+		iFlightDetailsRepostiory.deleteById(resuAirLine.getFlightId());
+
+	}
+
+	@Test
+	void updateFlightcheck() {
+		FlightDetails details = new FlightDetails("TestFlight", "TTF", true, "Chennai", "Coimbatore", "Bangalore",
+				"15:00", "18:00", "3:00", "AllDays", "Indico", 50l, "12000", 0l);
+		FlightDetails falseFlight = new FlightDetails(85l, "TestFlightTFE", "TTF", true, "Chennai", "Coimbatore",
+				"Bangalore", "15:00", "18:00", "3:00", "AllDays", "Indico", 50l, "12000", 0l);
+		FlightDetails resuAirLine = iFlightDetailsRepostiory.save(details);
+		resuAirLine.setFlightName("TestFlightTFE");
+		resuAirLine.setFlightCode("TTF");
+		FlightDetails updateFlight = iFlightDetailsRepostiory.save(resuAirLine);
+
+		assertEquals(updateFlight.getFlightCode(), "TTF");
+		assertEquals(updateFlight.getFlightName(), "TestFlightTFE");
+
+	}
+/**
+	@Test
+	void updateairlinecheck() {
+		AirLine airLine = new AirLine(98l, "TestAirline", "1234", true, "TA");
+		AirLine falseAirline = new AirLine("TestAirlinecv", "1234", true, "TA");
+		AirLine resuAirLine = airLineRepostiory.findById(98l).orElseThrow();
+		assertFalse(falseAirline.equals(resuAirLine));
+		assertEquals(resuAirLine.getAirlineName(), airLine.getAirlineName());
+		assertEquals(resuAirLine.getAirlineCode(), airLine.getAirlineCode());
+	}
+
+	@Test
+	void deactivateAirline() {
+		AirLine airLine = new AirLine(98l, "TestAirline", "1234", false, "TA");
+		AirLine falseAirline = new AirLine("TestAirlinecv", "1234", true, "TA");
+		AirLine resuAirLine = airLineRepostiory.save(airLine);
+		assertFalse(falseAirline.equals(resuAirLine));
+		assertEquals(resuAirLine.getAirlineName(), airLine.getAirlineName());
+		assertEquals(resuAirLine.isAirlineActiveStatus(), airLine.isAirlineActiveStatus());
+	}
+
+	@Test
+	void activateAirline() {
+		AirLine airLine = new AirLine(96l, "TestAirline", "1234", true, "TA");
+		AirLine falseAirline = new AirLine("TestAirlinecv", "1234", true, "TA");
+		AirLine resuAirLine = airLineRepostiory.save(airLine);
+		assertFalse(falseAirline.equals(resuAirLine));
+		assertEquals(resuAirLine.getAirlineName(), airLine.getAirlineName());
+		assertEquals(resuAirLine.isAirlineActiveStatus(), airLine.isAirlineActiveStatus());
+	}
+
+	@Test
+	void searchFlightById() {
+		AdminCtrl adminCtrl = new AdminCtrl();
+		FlightDetails details = new FlightDetails(85l, "TestFlight", "TTF", true, "Chennai", "Coimbatore", "Bangalore",
+				"15:00", "18:00", "3:00", "AllDays", "Indico", 50l, "12000", 0l);
+		FlightDetails falseDetails = new FlightDetails(85l, "TestFlight", "TTF2", false, "Chennai", "Coimbatore",
+				"Bangalore", "15:00", "18:00", "3:00", "AllDays", "Indico", 50l, "12000", 0l);
+		FlightDetails resultFlight = adminService.getFlightDetailsBuFlightId(85l);
+		assertEquals(details.getAirlineName(), resultFlight.getAirlineName());
+		assertFalse(falseDetails.equals(resultFlight));
+	}
+
+	@Test
+	void searchAirlineById() {
+		AirLine airLine = new AirLine(96l, "TestAirline", "1234", true, "TA");
+		AirLine falseAirline = new AirLine("TestAirlinecv", "1234", true, "TA");
+		AirLine resuAirLine = adminService.getAirLineByAirLineId(96l);
+		assertFalse(falseAirline.equals(resuAirLine));
+		assertEquals(resuAirLine.getAirlineName(), airLine.getAirlineName());
+	}
+**/
+}

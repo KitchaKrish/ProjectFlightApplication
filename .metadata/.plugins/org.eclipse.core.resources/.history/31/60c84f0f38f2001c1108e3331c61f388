@@ -1,0 +1,7 @@
+package com.admin.entity;
+
+@Entity
+@Table(name = "USeraccount")
+public class Useraccount {
+
+}

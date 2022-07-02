@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminTestCheck" project="Admin" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminTestCheck" time="0.771" displayname="AdminTestCheck" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]">
+    <testcase name="airlineSavecheck" classname="com.admin.Repo.AdminTestCheck" time="0.384" displayname="airlineSavecheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:airlineSavecheck()]"/>
+    <testcase name="saveFlightcheck" classname="com.admin.Repo.AdminTestCheck" time="0.055" displayname="saveFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:saveFlightcheck()]"/>
+    <testcase name="updateFlightcheck" classname="com.admin.Repo.AdminTestCheck" time="0.064" displayname="updateFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:updateFlightcheck()]"/>
+    <testcase name="updateairlinecheck" classname="com.admin.Repo.AdminTestCheck" time="0.015" displayname="updateairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:updateairlinecheck()]"/>
+    <testcase name="loadUserPresent" classname="com.admin.Repo.AdminTestCheck" time="0.251" displayname="loadUserPresent()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:loadUserPresent()]"/>
+  </testsuite>
+</testrun>

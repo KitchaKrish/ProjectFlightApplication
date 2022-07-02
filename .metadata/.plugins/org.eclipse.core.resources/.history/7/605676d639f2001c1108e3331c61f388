@@ -1,0 +1,24 @@
+package com.admin.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
+import com.admin.entity.Useraccount;
+
+@Service
+public class UseraccountServiceImpl implements UseraccountService {
+
+	
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) {
+		Useraccount user = useraccountRepostiory.findByUsername(username)
+				.orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
+
+		return useraccountRepostiory.build(user);
+	}
+	
+}

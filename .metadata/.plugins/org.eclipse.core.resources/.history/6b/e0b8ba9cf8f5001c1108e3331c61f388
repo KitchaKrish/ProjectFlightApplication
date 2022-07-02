@@ -1,0 +1,99 @@
+package com.user.ctrl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.user.entity.SearchFlightDetails;
+import com.user.entity.SearchFlightModel;
+import com.user.service.UserService;
+import com.user.ticket.entity.PassangerDetails;
+import com.user.ticket.entity.ShowticketDetails;
+import com.user.ticket.entity.TicketBooking;
+import com.user.ticket.entity.TicketBookingModel;
+import com.user.ticket.service.TicketBookingService;
+
+@RestController
+@RequestMapping(value = "/api/user/flightctrl")
+@CrossOrigin(origins = "*")
+public class FlightCtrl {
+
+	@Autowired
+	private UserService userService;
+
+	@Autowired
+	private TicketBookingService ticketBookingService;
+
+	@PostMapping(value = "/searchFlight")
+	public SearchFlightDetails searchFlight(@RequestBody SearchFlightModel searchFlightModel) {
+		SearchFlightDetails searchFlightDetails = new SearchFlightDetails();
+		try {
+			searchFlightDetails = userService.getSearchFlightList(searchFlightModel);
+			searchFlightDetails.setTripType(searchFlightModel.getSearchType());
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+		return searchFlightDetails;
+	}
+
+	@PostMapping(value = "/ticketBook")
+	public ShowticketDetails ticketBook(@RequestBody TicketBookingModel ticketBookingModel) {
+		ShowticketDetails showticketDetails = new ShowticketDetails();
+		try {
+
+			TicketBooking ticketBooking = new TicketBooking();
+			ticketBooking = ticketBookingService.ticketBookSave(ticketBookingModel);
+			ticketBookingModel.setPnrNumber(ticketBooking.getPnrNumber());
+
+			List<PassangerDetails> details = ticketBookingService.savePassangerDetails(ticketBookingModel);
+			showticketDetails = new ShowticketDetails(ticketBooking, details);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+		return showticketDetails;
+	}
+
+	@GetMapping(value = "/searchByPNR/{pnrNumber}")
+	public ShowticketDetails searchByPNR(@PathVariable String pnrNumber, String searchMode) {
+		ShowticketDetails showticketDetails = new ShowticketDetails();
+		try {
+
+			TicketBooking ticketBooking = new TicketBooking();
+			ticketBooking = ticketBookingService.getTicketDetailsByPnr(pnrNumber);
+
+			List<PassangerDetails> details = ticketBookingService.getPassangersDetails(pnrNumber);
+			showticketDetails = new ShowticketDetails(ticketBooking, details);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+		return showticketDetails;
+	}
+
+	@GetMapping(value = "/searchByUserName/{userName}")
+	public ShowticketDetails searchByUserName(@PathVariable String userName) {
+		ShowticketDetails showticketDetails = new ShowticketDetails();
+		try {
+
+			TicketBooking ticketBooking = new TicketBooking();
+			ticketBooking = ticketBookingService.getTicketDetailsByUserName(userName);
+
+			List<PassangerDetails> details = ticketBookingService.getPassangersDetails(ticketBooking.getPnrNumber());
+			showticketDetails = new ShowticketDetails(ticketBooking, details);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+		return showticketDetails;
+	}
+
+}

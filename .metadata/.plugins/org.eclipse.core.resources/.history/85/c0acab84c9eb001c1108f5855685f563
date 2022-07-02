@@ -1,0 +1,10 @@
+package com.user.ticket.entity;
+
+public class TicketBookingModel {
+	
+	private Long ticketBookingId;
+	private String fromCity;
+	private String endCity;
+	private String totalPriceAmount;
+	
+}

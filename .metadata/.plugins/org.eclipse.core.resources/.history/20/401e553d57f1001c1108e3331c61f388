@@ -1,0 +1,9 @@
+package com.user.entity;
+
+import java.util.List;
+
+public class SearchFlightDetails {
+
+	private List<SearchFlightModel> oneWayTrip;
+	
+}

@@ -1,0 +1,8 @@
+package com.user.exception;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class TicketNotFoundException {
+
+	
+	
+}

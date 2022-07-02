@@ -1,0 +1,70 @@
+package com.user.ctrl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.user.entity.SearchFlightModel;
+import com.user.service.UserService;
+import com.user.ticket.entity.PassangerDetails;
+import com.user.ticket.entity.ShowticketDetails;
+import com.user.ticket.entity.TicketBooking;
+import com.user.ticket.entity.TicketBookingModel;
+import com.user.ticket.service.TicketBookingService;
+
+@RestController
+@RequestMapping(value="/api/user/flightctrl")
+public class FlightCtrl {
+
+	@Autowired
+	private UserService userService;
+	
+	@Autowired
+	private TicketBookingService ticketBookingService;
+
+	@PostMapping(value = "/searchFlight")
+	public List<SearchFlightModel> searchFlight(@RequestBody SearchFlightModel searchFlightModel) {
+		List<SearchFlightModel> list = new ArrayList<>();
+		try {
+			list = userService.getSearchFlightList(searchFlightModel);
+
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+		return list;
+	}
+	
+	
+	@PostMapping(value = "/ticketBook")
+	public ShowticketDetails ticketBook(@RequestBody TicketBookingModel ticketBookingModel) {
+		ShowticketDetails showticketDetails = new ShowticketDetails();
+		try {
+			
+			TicketBooking ticketBooking = new TicketBooking();
+			ticketBooking.setAirlineName(ticketBookingModel.getAirlineName());
+			ticketBooking.setFlightName(ticketBookingModel.getFlightName());
+			ticketBooking.setStartTime(ticketBooking.getStartTime());
+			ticketBooking.setEndTime(ticketBooking.getEndTime());
+			ticketBooking.setFromCity(ticketBookingModel.getFromCity());
+			ticketBooking.setEndCity(ticketBookingModel.getEndCity());
+			ticketBooking.setTravelDate(ticketBookingModel.getTravelDate());
+			
+			ticketBooking = ticketBookingService.ticketBookSave(ticketBooking);
+			List<PassangerDetails> passangerDetails  = new ArrayList<>();
+			ticketBookingService.savePassangerDetails(passangerDetails);
+		 
+
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+		return list;
+	}
+
+}

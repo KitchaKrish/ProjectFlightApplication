@@ -1,0 +1,11 @@
+
+package com.admin.Repo;
+
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+
+import com.admin.ctrl.AdminCtrl;
+
+@WebMvcTest(AdminCtrl.class)	
+public class TestAdminCtrl {
+
+}

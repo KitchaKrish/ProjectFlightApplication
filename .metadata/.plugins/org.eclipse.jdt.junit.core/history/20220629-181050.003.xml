@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminCtrlTest" project="Admin" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminCtrlTest" time="0.891" displayname="AdminCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]">
+    <testcase name="testJunt" classname="com.admin.Repo.AdminCtrlTest" time="0.489" displayname="testJunt()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:testJunt()]"/>
+    <testcase name="allAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.402" displayname="allAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:allAirline()]"/>
+  </testsuite>
+</testrun>

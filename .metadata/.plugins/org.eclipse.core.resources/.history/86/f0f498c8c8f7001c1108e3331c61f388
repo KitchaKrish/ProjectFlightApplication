@@ -1,0 +1,43 @@
+package com.user.Repo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.ResponseEntity;
+
+import com.admin.entity.AirLine;
+import com.user.ctrl.FlightCtrl;
+import com.user.ticket.entity.ShowticketDetails;
+
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+public class UserCtrlTest {
+
+	@Autowired
+	private FlightCtrl ctrl;
+
+	@Autowired
+	private TestRestTemplate restTemplate;
+
+	@Test
+	void contextLoads() {
+	}
+	@LocalServerPort
+	private int port;
+	
+	@Test
+	public void allAirline() {
+
+		ResponseEntity<ShowticketDetails> response = this.restTemplate
+				.getForEntity("http://localhost:" + port + "/api/user/flightctrl/searchTicket", ShowticketDetails.class);
+
+		System.out.println("----->>>" + response.getStatusCodeValue());
+		assertEquals(response.getStatusCodeValue(), 200);
+
+	}
+
+}

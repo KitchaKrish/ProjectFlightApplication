@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminCtrlTest" project="Admin" tests="13" started="13" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminCtrlTest" time="1.408" displayname="AdminCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]">
+    <testcase name="testJunt" classname="com.admin.Repo.AdminCtrlTest" time="0.375" displayname="testJunt()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:testJunt()]"/>
+    <testcase name="createAirlineError" classname="com.admin.Repo.AdminCtrlTest" time="0.295" displayname="createAirlineError()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createAirlineError()]"/>
+    <testcase name="allFlight" classname="com.admin.Repo.AdminCtrlTest" time="0.211" displayname="allFlight()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:allFlight()]"/>
+    <testcase name="getflightById" classname="com.admin.Repo.AdminCtrlTest" time="0.042" displayname="getflightById()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:getflightById()]"/>
+    <testcase name="getAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.08" displayname="getAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:getAirline()]"/>
+    <testcase name="allAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.027" displayname="allAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:allAirline()]"/>
+    <testcase name="getFlight" classname="com.admin.Repo.AdminCtrlTest" time="0.044" displayname="getFlight()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:getFlight()]"/>
+    <testcase name="createAirlineNew" classname="com.admin.Repo.AdminCtrlTest" time="0.141" displayname="createAirlineNew()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createAirlineNew()]"/>
+    <testcase name="createFlight" classname="com.admin.Repo.AdminCtrlTest" time="0.07" displayname="createFlight()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createFlight()]"/>
+    <testcase name="createAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.05" displayname="createAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createAirline()]"/>
+    <testcase name="getairlineById" classname="com.admin.Repo.AdminCtrlTest" time="0.026" displayname="getairlineById()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:getairlineById()]"/>
+    <testcase name="updateAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.012" displayname="updateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:updateAirline()]"/>
+    <testcase name="createFlightError" classname="com.admin.Repo.AdminCtrlTest" time="0.035" displayname="createFlightError()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createFlightError()]"/>
+  </testsuite>
+</testrun>

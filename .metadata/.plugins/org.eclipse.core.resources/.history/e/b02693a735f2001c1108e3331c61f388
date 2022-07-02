@@ -1,0 +1,8 @@
+package com.admin.entity;
+
+public class Login {
+
+	private String username;
+	private String password;
+	
+}

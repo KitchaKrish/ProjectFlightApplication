@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminCtrlTest" project="Admin" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminCtrlTest" time="31.765" displayname="AdminCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]">
+    <testcase name="testJunt" classname="com.admin.Repo.AdminCtrlTest" time="0.632" displayname="testJunt()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:testJunt()]"/>
+    <testcase name="createAirlineError" classname="com.admin.Repo.AdminCtrlTest" time="30.545" displayname="createAirlineError()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createAirlineError()]"/>
+    <testcase name="allFlight" classname="com.admin.Repo.AdminCtrlTest" time="0.308" displayname="allFlight()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:allFlight()]"/>
+    <testcase name="getAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.105" displayname="getAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:getAirline()]"/>
+    <testcase name="allAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.029" displayname="allAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:allAirline()]"/>
+    <testcase name="getFlight" classname="com.admin.Repo.AdminCtrlTest" time="0.048" displayname="getFlight()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:getFlight()]"/>
+    <testcase name="createFlight" classname="com.admin.Repo.AdminCtrlTest" time="0.052" displayname="createFlight()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createFlight()]"/>
+    <testcase name="createAirline" classname="com.admin.Repo.AdminCtrlTest" time="0.044" displayname="createAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminCtrlTest]/[method:createAirline()]"/>
+  </testsuite>
+</testrun>

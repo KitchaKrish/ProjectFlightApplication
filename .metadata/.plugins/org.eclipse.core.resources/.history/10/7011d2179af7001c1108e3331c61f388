@@ -1,0 +1,42 @@
+package com.admin.Repo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.admin.ctrl.AdminCtrl;
+import com.admin.service.AdminService;
+
+@WebMvcTest(value = AdminCtrl.class)
+public class AdminCtrlTest {
+	
+	@MockBean
+	private AdminService adminService;
+	
+	@Autowired
+	private MockMvc mockMvc;
+	
+	@Test
+	public void welcomemsg() throws Exception {
+		
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/test");
+		ResultActions actions = mockMvc.perform(builder);
+		
+		MvcResult mvcResult = actions.andReturn();
+		MockHttpServletResponse response = mvcResult.getResponse();
+		assertEquals(200, response.getStatus());
+		
+		
+	}
+
+}

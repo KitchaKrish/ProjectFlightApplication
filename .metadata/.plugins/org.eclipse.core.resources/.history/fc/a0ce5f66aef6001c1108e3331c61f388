@@ -1,0 +1,25 @@
+package com.admin.Repo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.admin.service.IUseraccountRepostiory;
+
+public class AdminTestCheck {
+	
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+	@Test
+	void isPresent() {
+		Person person = new Person(121, "Krishna", "Krishna@gmail.com");
+		iPersonRepostiory.save(person);
+		boolean s = false;
+		Optional<Person> person2 = iPersonRepostiory.findById(121);
+		System.out.println(person2);
+		if(person2!=null) {
+			s = true;
+		}
+		assertThat(s).isTrue();
+		
+	}
+
+}

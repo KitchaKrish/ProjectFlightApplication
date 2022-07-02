@@ -1,0 +1,79 @@
+package com.user.ticket.entity;
+
+import java.util.List;
+
+public class TicketBookingModel {
+	
+	private String fromCity;
+	private String endCity;
+	private String flightName;
+	private String airlineName;
+	private String travelDate;
+	private String startTime;
+	private String endTime;
+	private String pnrNumber;
+	private String totalPriceAmount;
+	private String flightCode;
+	private List<PassangerDetails> passangerList;
+	public String getFromCity() {
+		return fromCity;
+	}
+	public void setFromCity(String fromCity) {
+		this.fromCity = fromCity;
+	}
+	public String getEndCity() {
+		return endCity;
+	}
+	public void setEndCity(String endCity) {
+		this.endCity = endCity;
+	}
+	public String getFlightName() {
+		return flightName;
+	}
+	public void setFlightName(String flightName) {
+		this.flightName = flightName;
+	}
+	public String getAirlineName() {
+		return airlineName;
+	}
+	public void setAirlineName(String airlineName) {
+		this.airlineName = airlineName;
+	}
+	public String getTravelDate() {
+		return travelDate;
+	}
+	public void setTravelDate(String travelDate) {
+		this.travelDate = travelDate;
+	}
+	public String getStartTime() {
+		return startTime;
+	}
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+	public String getEndTime() {
+		return endTime;
+	}
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
+	public String getPnrNumber() {
+		return pnrNumber;
+	}
+	public void setPnrNumber(String pnrNumber) {
+		this.pnrNumber = pnrNumber;
+	}
+	public String getTotalPriceAmount() {
+		return totalPriceAmount;
+	}
+	public void setTotalPriceAmount(String totalPriceAmount) {
+		this.totalPriceAmount = totalPriceAmount;
+	}
+	public List<PassangerDetails> getPassangerList() {
+		return passangerList;
+	}
+	public void setPassangerList(List<PassangerDetails> passangerList) {
+		this.passangerList = passangerList;
+	}
+	
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminTestCheck" project="Admin" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminTestCheck" time="0.707" displayname="AdminTestCheck" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]">
+    <testcase name="airlineSavecheck" classname="com.admin.Repo.AdminTestCheck" time="0.38" displayname="airlineSavecheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:airlineSavecheck()]"/>
+    <testcase name="loadUserPresent" classname="com.admin.Repo.AdminTestCheck" time="0.327" displayname="loadUserPresent()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:loadUserPresent()]"/>
+  </testsuite>
+</testrun>

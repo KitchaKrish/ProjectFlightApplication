@@ -1,0 +1,13 @@
+package com.user.ticket.entity;
+
+import java.util.List;
+
+public class ShowticketDetails {
+
+	private TicketBooking ticketBooking;
+	private List<PassangerDetails> passangeDetails;
+	
+
+
+	
+}

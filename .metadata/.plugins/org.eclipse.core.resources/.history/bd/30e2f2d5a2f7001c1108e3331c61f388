@@ -1,0 +1,9 @@
+
+package com.admin.Repo;
+
+import com.admin.ctrl.AdminCtrl;
+
+@WebMvcTest(AdminCtrl.class)	
+public class TestAdminCtrl {
+
+}

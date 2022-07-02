@@ -1,0 +1,78 @@
+package com.user.ticket.entity;
+
+import java.util.List;
+
+public class ShowticketDetails {
+
+	private TicketBooking ticketBooking;
+	private List<PassangerDetails> passangeDetails;
+	
+
+	public String getFromCity() {
+		return fromCity;
+	}
+
+	public void setFromCity(String fromCity) {
+		this.fromCity = fromCity;
+	}
+
+	public String getEndCity() {
+		return endCity;
+	}
+
+	public void setEndCity(String endCity) {
+		this.endCity = endCity;
+	}
+
+	public String getPnrNumber() {
+		return pnrNumber;
+	}
+
+	public void setPnrNumber(String pnrNumber) {
+		this.pnrNumber = pnrNumber;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public List<PassangerDetails> getPassangeDetails() {
+		return passangeDetails;
+	}
+
+	public void setPassangeDetails(List<PassangerDetails> passangeDetails) {
+		this.passangeDetails = passangeDetails;
+	}
+
+	
+	public String getTotalPriceAmount() {
+		return totalPriceAmount;
+	}
+
+	public void setTotalPriceAmount(String totalPriceAmount) {
+		this.totalPriceAmount = totalPriceAmount;
+	}
+
+	
+	public ShowticketDetails(String fromCity, String endCity, String pnrNumber, String userName,
+			List<PassangerDetails> passangeDetails,String totalpriceAmount) {
+		super();
+		this.fromCity = fromCity;
+		this.endCity = endCity;
+		this.pnrNumber = pnrNumber;
+		this.userName = userName;
+		this.passangeDetails = passangeDetails;
+		this.totalPriceAmount = totalpriceAmount;
+	}
+
+	public ShowticketDetails() {
+		super();
+	}
+
+
+	
+}

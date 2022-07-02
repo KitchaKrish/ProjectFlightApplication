@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="User" project="User" tests="14" started="14" failures="0" errors="0" ignored="0">
+  <testsuite name="com.user.Repo.UserCtrlTest" time="3.17" displayname="UserCtrlTest" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]">
+    <testcase name="mealType" classname="com.user.Repo.UserCtrlTest" time="0.562" displayname="mealType()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:mealType()]"/>
+    <testcase name="searchTicket" classname="com.user.Repo.UserCtrlTest" time="0.264" displayname="searchTicket()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:searchTicket()]"/>
+    <testcase name="contextLoads" classname="com.user.Repo.UserCtrlTest" time="0.006" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:contextLoads()]"/>
+    <testcase name="ticketbook" classname="com.user.Repo.UserCtrlTest" time="2.338" displayname="ticketbook()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserCtrlTest]/[method:ticketbook()]"/>
+  </testsuite>
+  <testsuite name="com.user.Repo.UserTestCheck" time="0.688" displayname="UserTestCheck" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]">
+    <testcase name="airlineSavecheck" classname="com.user.Repo.UserTestCheck" time="0.065" displayname="airlineSavecheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:airlineSavecheck()]"/>
+    <testcase name="saveFlightcheck" classname="com.user.Repo.UserTestCheck" time="0.063" displayname="saveFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:saveFlightcheck()]"/>
+    <testcase name="deactivateAirline" classname="com.user.Repo.UserTestCheck" time="0.081" displayname="deactivateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:deactivateAirline()]"/>
+    <testcase name="airlineListByAirlineName" classname="com.user.Repo.UserTestCheck" time="0.229" displayname="airlineListByAirlineName()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:airlineListByAirlineName()]"/>
+    <testcase name="updateFlightcheck" classname="com.user.Repo.UserTestCheck" time="0.055" displayname="updateFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:updateFlightcheck()]"/>
+    <testcase name="deleteairlinecheck" classname="com.user.Repo.UserTestCheck" time="0.045" displayname="deleteairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:deleteairlinecheck()]"/>
+    <testcase name="updateairlinecheck" classname="com.user.Repo.UserTestCheck" time="0.042" displayname="updateairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:updateairlinecheck()]"/>
+    <testcase name="activateAirline" classname="com.user.Repo.UserTestCheck" time="0.047" displayname="activateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:activateAirline()]"/>
+    <testcase name="deleteFlightcheck" classname="com.user.Repo.UserTestCheck" time="0.061" displayname="deleteFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.user.Repo.UserTestCheck]/[method:deleteFlightcheck()]"/>
+  </testsuite>
+  <testsuite name="com.user.UserApplicationTests" time="0.006" displayname="UserApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.user.UserApplicationTests]">
+    <testcase name="contextLoads" classname="com.user.UserApplicationTests" time="0.006" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.user.UserApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

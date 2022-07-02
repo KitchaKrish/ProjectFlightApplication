@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminTestCheck" project="Admin" tests="14" started="14" failures="0" errors="0" ignored="0">
+  <testsuite name="com.admin.Repo.AdminTestCheck" time="1.916" displayname="AdminTestCheck" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]">
+    <testcase name="airlineSavecheck" classname="com.admin.Repo.AdminTestCheck" time="0.557" displayname="airlineSavecheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:airlineSavecheck()]"/>
+    <testcase name="saveFlightcheck" classname="com.admin.Repo.AdminTestCheck" time="0.138" displayname="saveFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:saveFlightcheck()]"/>
+    <testcase name="deactivateAirline" classname="com.admin.Repo.AdminTestCheck" time="0.143" displayname="deactivateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:deactivateAirline()]"/>
+    <testcase name="airlineListByAirlineName" classname="com.admin.Repo.AdminTestCheck" time="0.508" displayname="airlineListByAirlineName()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:airlineListByAirlineName()]"/>
+    <testcase name="airlineList" classname="com.admin.Repo.AdminTestCheck" time="0.031" displayname="airlineList()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:airlineList()]"/>
+    <testcase name="updateFlightcheck" classname="com.admin.Repo.AdminTestCheck" time="0.083" displayname="updateFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:updateFlightcheck()]"/>
+    <testcase name="deleteairlinecheck" classname="com.admin.Repo.AdminTestCheck" time="0.081" displayname="deleteairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:deleteairlinecheck()]"/>
+    <testcase name="updateairlinecheck" classname="com.admin.Repo.AdminTestCheck" time="0.069" displayname="updateairlinecheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:updateairlinecheck()]"/>
+    <testcase name="flightListByFightName" classname="com.admin.Repo.AdminTestCheck" time="0.078" displayname="flightListByFightName()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:flightListByFightName()]"/>
+    <testcase name="activateAirline" classname="com.admin.Repo.AdminTestCheck" time="0.066" displayname="activateAirline()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:activateAirline()]"/>
+    <testcase name="loadfirstNamePresent" classname="com.admin.Repo.AdminTestCheck" time="0.031" displayname="loadfirstNamePresent()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:loadfirstNamePresent()]"/>
+    <testcase name="deleteFlightcheck" classname="com.admin.Repo.AdminTestCheck" time="0.076" displayname="deleteFlightcheck()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:deleteFlightcheck()]"/>
+    <testcase name="loadUserPresent" classname="com.admin.Repo.AdminTestCheck" time="0.02" displayname="loadUserPresent()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:loadUserPresent()]"/>
+    <testcase name="flightList" classname="com.admin.Repo.AdminTestCheck" time="0.034" displayname="flightList()" uniqueid="[engine:junit-jupiter]/[class:com.admin.Repo.AdminTestCheck]/[method:flightList()]"/>
+  </testsuite>
+</testrun>

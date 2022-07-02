@@ -1,0 +1,7 @@
+package com.admin.service;
+
+public interface IUseraccountRepostiory {
+
+	Useraccount findByUsername(String username);
+
+}

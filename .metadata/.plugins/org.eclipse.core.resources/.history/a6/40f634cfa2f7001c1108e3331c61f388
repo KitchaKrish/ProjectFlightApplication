@@ -1,0 +1,9 @@
+
+package com.admin.Repo;
+
+
+@WebMvcTest(GreetingController.class)
+
+public class TestAdminCtrl {
+
+}

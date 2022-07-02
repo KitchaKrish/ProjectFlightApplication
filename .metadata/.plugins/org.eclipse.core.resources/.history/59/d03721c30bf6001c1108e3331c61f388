@@ -1,0 +1,14 @@
+package com.user.ticket.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.user.ticket.entity.TicketBooking;
+
+public interface ITicketBookingRepostiory extends JpaRepository<TicketBooking, Long> {
+
+	TicketBooking findByPnrNumber(String pnrNumber);
+
+	TicketBooking findByUserName(String userName);
+
+	
+}

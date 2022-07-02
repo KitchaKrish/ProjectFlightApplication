@@ -1,0 +1,53 @@
+package com.user.ticket.service;
+
+import java.util.List;
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.user.ticket.entity.PassangerDetails;
+import com.user.ticket.entity.TicketBooking;
+import com.user.ticket.entity.TicketBookingModel;
+
+@Service
+public class TicketBookingServiceImpl implements TicketBookingService {
+
+	@Autowired
+	private ITicketBookingRepostiory repostiory;
+
+	@Autowired
+	private IPassangerDetailsRepostiory passangerDetailsRepostiory;
+
+	@Override
+	public void savePassangerDetails(List<PassangerDetails> passangerDetails) {
+		for (PassangerDetails details : passangerDetails) {
+			passangerDetailsRepostiory.save(details);
+		}
+	}
+
+	@Override
+	public TicketBooking ticketBookSave(TicketBookingModel ticketBookingModel) {
+		// TODO Auto-generated method stub
+
+		TicketBooking ticketBooking = new TicketBooking();
+		ticketBooking.setAirlineName(ticketBookingModel.getAirlineName());
+		ticketBooking.setFlightName(ticketBookingModel.getFlightName());
+		ticketBooking.setStartTime(ticketBooking.getStartTime());
+		ticketBooking.setEndTime(ticketBooking.getEndTime());
+		ticketBooking.setFromCity(ticketBookingModel.getFromCity());
+		ticketBooking.setEndCity(ticketBookingModel.getEndCity());
+		ticketBooking.setTravelDate(ticketBookingModel.getTravelDate());
+		ticketBooking.setPnrNumber(pnrGenerate());
+
+		return repostiory.save(ticketBooking);
+	}
+
+	private static String pnrGenerate() {
+		Random rand = new Random();
+		int int1 = rand.nextInt(100000);
+		String pnrNumber = "PNR000" + Integer.toString(int1);
+		return pnrNumber;
+	}
+
+}

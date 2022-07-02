@@ -1,0 +1,16 @@
+package com.user.ticket.entity;
+
+import java.util.List;
+
+public class TicketBookingModel {
+	
+	private String fromCity;
+	private String endCity;
+	private String travelDate;
+	private String flightName;
+	private String airlineName;
+	
+	private String totalPriceAmount;
+	private List<PassangerDetails> passangerList;
+	
+}

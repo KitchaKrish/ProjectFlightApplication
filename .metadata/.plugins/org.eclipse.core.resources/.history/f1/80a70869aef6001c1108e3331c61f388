@@ -1,0 +1,17 @@
+package com.admin.Repo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.admin.service.IUseraccountRepostiory;
+
+public class AdminTestCheck {
+	
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+	@Test
+	void isPresent() {
+		
+		
+	}
+
+}

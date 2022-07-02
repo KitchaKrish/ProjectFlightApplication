@@ -1,0 +1,20 @@
+package com.admin.Repo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.admin.service.IUseraccountRepostiory;
+
+public class AdminTestCheck {
+	
+	@Autowired
+	private IUseraccountRepostiory useraccountRepostiory;
+	@Test
+	void loadUserPresent() {
+		
+		String s = "krishna@test.com"
+		
+		
+	}
+
+}
